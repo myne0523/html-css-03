@@ -62,6 +62,34 @@ a{
     color: #575F66;
 }
 
+
+.control{
+    display: flex;
+    column-gap: 18px;
+}
+
+.control__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #575F66;
+    outline:none;
+    color: #575F66;
+    background: #FFFFFF;
+    transition: .25s;
+}
+
+.control__btn:hover{
+    color: #FFFFFF;
+    border-color: #2E80CE;
+    background: #2E80CE;
+    cursor: pointer;
+}
+
+
 /* Header */
 .header{
     min-height: 100vh;
@@ -453,6 +481,11 @@ a{
     margin-top: 70px;
 }
 
+.member__control{
+    margin-top: 38px;
+    justify-content: center;
+}
+
 .member-item__img-bg{
     padding-top: 28px;
     border-radius: 6px;
@@ -465,6 +498,11 @@ a{
     max-width: 100%;
     height: 290px;
     object-fit: cover;
+    transition: .25s;
+}
+
+.member-item:hover .member-item__thumb{
+    transform: scale(1.1);
 }
 
 .member-item__name{
@@ -482,31 +520,190 @@ a{
     color: #575F66;
 }
 
-.member__control{
+/* Install */
+.install{
+    margin-top: 190px;
+}
+
+.install__inner{
     display: flex;
     align-items: center;
-    justify-content: center;
-    column-gap: 18px;
+    justify-content: space-between;
+    padding: 0 70px;
+    border-radius: 4px;
+    background:#2E80CE;
+}
+
+.install__img{
+    display: block;
+    width: 284px;
+    height: 522px;
+    margin-top: -95px;
+    object-fit: cover;
+}
+
+.install__content{
+    max-width: 586px;;
+}
+
+.install-heading,
+.install-desc{
+    color: #FFFFFF ;
+}
+
+.install-heading{
+    max-width: 489px;
+}
+
+.install__row{
+    display: flex;
+    column-gap: 28px;
     margin-top: 38px;
 }
 
-.member__control-btn{
+/* News */
+.news{
+    margin-top: 85px;
+    padding:85px 0 ;
+}
+
+.news__inner{
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    border: 1px solid #575F66;
-    outline:none;
-    color: #575F66;
+    justify-content: space-between;
+}
+
+.news__content{
+    flex-shrink: 0;
+}
+
+.news__heading{
+    max-width: 470px;
+}
+
+.news__more{
+    display: inline-block;
+    margin-top: 28px;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.56;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-style: solid;
+    color: #10375C;
+}
+
+.news__control{
+    margin-top: 28px;
+}
+
+.news__list{
+    display: flex;
+    column-gap: 30px;
+    max-width: 570px;
+}
+
+.news-item{
+    flex: 1;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: .25s;
+}
+
+.news-item:hover{
+    box-shadow: 0px 18px 50px 0px #0000000D;
+    transform: translateY(-16px);
+}
+
+.news-item:hover .news-item__body{
+    border-color: #FFFFFF;
+}
+
+.news-item__thumb{
+    display: block;
+    width: 100%;
+    height: 172px;
+    object-fit: cover;
+    transition: .25s;
+}
+
+.news-item:hover .news-item__thumb{
+    transform: scale(1.1);
+}
+
+.news-item__body{
+    padding: 24px 24px 16px;
+    border: 1px solid #E8EBEE;
+    border-top: none;
+    border-radius: 0 0 12px 12px;
     background: #FFFFFF;
     transition: .25s;
 }
 
-.member__control-btn:hover{
-    color: #FFFFFF;
-    border-color: #2E80CE;
+.news-item__heading{
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 1.625;
+    color: #10375C;
+}
+
+.news-item__desc{
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.7;
+    color: #575F66;
+}
+
+.news-item__more{
+    display: inline-block;
+    margin-top: 12px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #10375C;
+}
+
+.news-item:hover .news-item__more{
+    color: #2E80CE;
+}
+
+/* Appointment */
+.appointment{
+    margin: 85px 0 170px;
+}
+
+.appointment__inner{
+    padding: 100px 178px;
+    border-radius: 4px;
+    text-align: center;
+    background: #F6FBFF;
+}
+
+.appointment__heading{
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.appointment__heading::after{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    content: "";
+    display: block;
+    width: 136px;
+    height: 2px;
     background: #2E80CE;
-    cursor: pointer;
+}
+
+.appointment__desc{
+    max-width: 617px;
+    margin:18px auto;
+    font-size: 1.6rem;
+    line-height: 1.75;
+}
+
+.appointment__cta{
+    margin-top: 38px;
 }
